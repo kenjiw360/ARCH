@@ -100,7 +100,7 @@ io.on('connection',function (socket){
         console.log(obj.resume)
         var resume = "ARRAY[";
         for(i=0; i< obj["resume"].length; i++){
-            resume = resume + "'" + JSON.stringify(obj["resume"][i]) + "'::json";
+            resume = resume + "'" + replaceAll(JSON.stringify(obj["resume"][i]),"'","''") + "'::json";
             if(i != obj["resume"].length - 1){
                 resume = resume + ",";
             };
@@ -123,7 +123,7 @@ io.on('connection',function (socket){
                     idexists = await pool.query(`SELECT EXISTS(SELECT 1 FROM "public"."users" WHERE 'id' = '${uuid}');`);
                     idexists = idexists["rows"][0]["exists"];
                 };
-                await pool.query(`INSERT INTO "public"."users" (id, name, resume, pastjobs, declinedoffers, bio, pfp, datejoined, email, recommendations,password,contactinfo,bday, education,skills,visits,emailclicks) VALUES (${uuid},'${name}','{}','{}',0,'"Don''t trust quotes made by a random person" - Niels Bohr','${pfp["pfp"]}',NOW(),'${replaceAll(replaceAll(email, "'", "''"), "\"", "\\\"").toLowerCase()}','{}','${hash(password)}','{}',null,'{}','{}','{}','{}');`);
+                await pool.query(`INSERT INTO "public"."users" (id, name, resume, pastjobs, bio, pfp, datejoined, email,password,contactinfo,bday, education,skills,visits,emailclicks) VALUES (${uuid},'${name}','{}','{}','"Don''t trust quotes made by a random person" - Niels Bohr','${pfp["pfp"]}',NOW(),'${replaceAll(replaceAll(email, "'", "''"), "\"", "\\\"").toLowerCase()}','${hash(password)}','{}',null,'{}','{}','{}','{}');`);
                 callback([true, uuid]);
             };
         } else {
@@ -183,6 +183,7 @@ async function algorithm (query, tags, type) {
         return result["rows"]
     } else {
         tags = "'"+tags+"']";
+        tags = tags
         tags = replaceAll(replaceAll(tags,",","','"),"',' ","','");
         var candidates = await pool.query(`SELECT * FROM "public"."users" WHERE skills && ARRAY[${tags};`);
         candidates = candidates.rows;

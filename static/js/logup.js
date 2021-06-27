@@ -1,6 +1,6 @@
 var socket = io();
 if (localStorage.getItem("userToken")) {
-    location = "/"
+    location = "/home"
 }
 document.getElementById("sidebarbutton2").addEventListener("click", function (e) {
     document.querySelector('textarea#logupportiontrigger').value = "";
@@ -15,7 +15,7 @@ document.getElementById("submits").addEventListener("click", function (e) {
     socket.emit('signup', fullname, email, password, function (result) {
         if(result[0]) {
             localStorage.setItem("userToken", result[1]);
-            location = "/";
+            location = "/home";
         }
     })
 });
