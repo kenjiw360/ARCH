@@ -466,3 +466,10 @@
 2021-06-26 23:27:44.706 PDT [14586] ERROR:  cannot determine type of empty array at character 407
 2021-06-26 23:27:44.706 PDT [14586] HINT:  Explicitly cast to the desired type, for example ARRAY[]::integer[].
 2021-06-26 23:27:44.706 PDT [14586] STATEMENT:  UPDATE "public"."users" SET name = 'Kenji Wang', education = ARRAY['{"inst":"Grapeland","first":"2014","last":"2018"}'::json,'{"inst":"Homeschool","first":"2018","last":"2021"}'::json,'{"inst":"Davidson Academy Online","first":"2021","last":"9999"}'::json], bio = '"Don''t trust quotes made by a random person" - Niels Bohr', skills = ARRAY['HTML','CSS','JS'], bday = '1984-1-24 10:10:10.101010', resume = ARRAY[] WHERE id = 27602490754202;
+2021-06-27 01:46:32.444 PDT [91075] LOG:  received fast shutdown request
+2021-06-27 01:46:32.446 PDT [91075] LOG:  aborting any active transactions
+2021-06-27 01:46:32.446 PDT [12975] FATAL:  terminating connection due to administrator command
+2021-06-27 01:46:32.446 PDT [91833] FATAL:  terminating connection due to administrator command
+2021-06-27 01:46:32.448 PDT [91075] LOG:  background worker "logical replication launcher" (PID 91082) exited with exit code 1
+2021-06-27 01:46:32.450 PDT [91077] LOG:  shutting down
+2021-06-27 01:46:32.462 PDT [91075] LOG:  database system is shut down
