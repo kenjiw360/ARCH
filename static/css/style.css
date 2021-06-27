@@ -1,0 +1,547 @@
+:root{
+    --darkblue: rgb(94, 176, 189);
+    --blue:rgb(130,200,210);
+    --lightblue: rgb(139, 223, 236);
+    --offwhite: rgb(250, 250, 250);
+    --grey: rgb(195,195,195);
+    --lightgrey: rgb(220,220,220);
+    --lightergrey: rgb(235,235,235);
+    --matteblack: rgb(30,30,30);
+}
+html{
+    padding:0px;
+    margin:0px;
+}
+body{
+    padding:0px;
+    margin:0px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+    display: none;
+    border: none;
+    outline: none;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+@font-face{
+    font-family: light;
+    font-weight:1000;
+    src: url(/static/fonts/Gotham/Gotham\ Light/Gotham\ Light.otf);
+}
+@font-face{
+    font-family: medium;
+    src: url(/static/fonts/Metropolis/Metropolis-Medium.otf);
+}
+@font-face{
+    font-family: bold;
+    src: url(/static/fonts/Metropolis/Metropolis-Bold.otf);
+}
+fullscreen{
+    position:relative;
+    display:block;
+    height:100vh;
+    width:100vw;
+}
+full{
+    position:relative;
+    left:0px;
+    display:block;
+    width:100%;
+    height:100%;
+    transition:1s;
+}
+full2{
+    position:relative;
+    left:-36vw;
+    display:block;
+    width:90vw;
+    height:100%;
+    transition:1s;
+}
+gbr{
+    display:block;
+    width:0.01px;
+    height:2vh;
+}
+.centercontent{
+    text-align:center;
+}
+.centered{
+    display:block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.nospace{
+    padding:0px;
+    margin:0px;
+}
+.white{
+    color: white;
+}
+.nooverflow {
+    overflow:hidden;
+}
+p,pre{
+    font-size:2.5vh;
+    line-height: 1.5;
+    font-family:medium;
+}
+h1{
+    line-height: 1.5;
+    font-size: 5vh;
+    font-family: medium;
+}
+h1.huge{
+    font-size: 7.5vh;
+}
+h1.massive{
+    font-size: 12vh;
+}
+h2,h3,h4,h5,h6{
+    line-height: 1.5;
+    font-family: medium;
+}
+h2 {
+    font-size: 3vh;
+}
+h3 {
+    font-size: 2.5vh;
+}
+h4{
+    font-size: 2vh;
+}
+h5{
+    font-size: 1.8vh;
+}
+h6{
+    font-size: 1.4vh;
+}
+input{
+    background: rgb(250,250,250);
+    padding: 2.5vh;
+    font-family: light;
+    font-size:2.5vh;
+    border: solid 0.3vh rgb(200,200,200);
+    border-radius: 0.2vh;
+    outline:none;
+    transition:0.3s;
+}
+input:focus{
+    /*border: solid 0.3vh rgb(30,182,255);*/
+    border: solid 0.3vh rgb(0,0,0);
+}
+button{
+    padding: 3vh 9vh;
+    font-size:2.5vh;
+    text-transform: uppercase;
+    color:white;
+    font-family:medium;
+    border: solid 0.3vh var(--blue);
+    background: var(--blue);
+    border-radius: 7.5vh;
+}
+button:focus{
+    animation: shrink 0.3s ease-in-out 1;
+}
+@keyframes shrink {
+    0%{
+        padding: 3vh 9vh;
+    }
+    50%{
+        font-size: 2.35vh;
+        padding: 2.5vh 8.5vh;
+        margin: 0.575vh;
+    }
+    100%{
+        padding: 3vh 9vh;
+    }
+}
+button.transparent{
+    background: rgba(0,0,0,0);
+    border-color:white;
+
+}
+body {
+    background-color: var(--offwhite);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.bigwidget {
+    overflow:hidden;
+    height: 80vh;
+    width: 90vw;
+    border-radius: 2vh;
+    background-color: white;
+}
+.logupportion {
+    overflow:hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 40%;
+    transition:1s;
+}
+.logupportion full{
+    background: var(--blue);
+}
+.logupportion2 {
+    position: absolute;
+    left: 40%;
+    top: 0px;
+    height: 100%;
+    width: 60%;
+    overflow:hidden;
+    transition:1s;
+}
+.hidden {
+    display: none;
+}
+.hiddent{
+    display: hidden;
+}
+textarea#logupportiontrigger:valid ~ .logupportion{
+    left:60%;
+}
+textarea#logupportiontrigger:valid ~ .logupportion full{
+    left: -54vw;
+}
+textarea#logupportiontrigger:valid ~ .logupportion2{
+    left:0%;
+}
+textarea#logupportiontrigger:valid ~ .logupportion2 full2{
+    left: 0vw;
+}
+textarea#logupportiontrigger:valid ~ .logupportion2 full2 .lupr{
+    pointer-events:none;
+}
+textarea#logupportiontrigger:valid ~ .logupportion2 full2 .lupr div{
+    transform:translate(-150%,0%);
+}
+textarea#logupportiontrigger:valid ~ .logupportion2 full2 .lupl{
+    pointer-events:all;
+}
+textarea#logupportiontrigger:valid ~ .logupportion2 full2 .lupl div{
+    transform:translate(0%,0%);
+}
+.loguplogo {
+    position: absolute;
+    top: 3vh;
+    left: 3vh;
+    height: 6vh;
+}
+.loguplogosolid {
+    position: absolute;
+    top: 3vh;
+    left: 3vh;
+    height: 6vh;
+}
+.lupr{
+    overflow:hidden;
+    pointer-events:all;
+}
+.lupr div{
+    transition:1s;
+    background:white;
+}
+.lupl{
+    overflow:hidden;
+    pointer-events:none;
+}
+.lupl div{
+    transform:translate(100%,0%);
+    background:white;
+    transition:1s;
+}
+.container{
+    background:var(--grey);
+    display:block;
+    position:relative;
+    height:45vh;
+    width:100%;
+}
+.findinterns{
+    background:var(--lightblue);
+    display:block;
+    position:absolute;
+    top:0%;
+    left:0%;
+    width:50%;
+    height:100%;
+    cursor:pointer;
+}
+.findinterns h1{
+    transition:1s;
+}
+.findinterns:hover h1{
+    font-size:5.25vh;
+    transition:1s;
+}
+.applyforinternships{
+    background:var(--lightblue);
+    display:block;
+    position:absolute;
+    top:0%;
+    left:50%;
+    width:50%;
+    height:100%;
+    border-left: solid 1vh var(--blue);
+    cursor:pointer;
+}
+.applyforinternships h1{
+    transition:1s;
+}
+.applyforinternships:hover h1{
+    font-size:5.25vh;
+    transition:1s;
+}
+img.portfolioheaderpfp{
+    height: 10vh;
+    width: 10vh;
+    display:block;
+    border-radius:50%;
+}
+.opaqueinput::placeholder{
+    color: var(--offwhite);
+}
+.opaqueinput:focus{
+    border:none;
+}
+.opaqueinput{
+    background: rgba(0,0,0,0.1);
+    border-radius:1vh;
+    border:none;
+}
+button.plus{
+    font-size:4vh;
+    border-radius:2vh;
+    padding:1vh;
+    height: 6vh;
+    width: 6vh;
+}
+button.plus:focus{
+    animation:none;
+}
+button.plus:active{
+    background: rgb(107, 179, 190);
+}
+.opaquetextarea{
+    line-height: 1.5;
+    resize:none;
+    background: rgba(0,0,0,0.1);
+    border:none;
+    border-radius:2vh;
+    padding:2.5vh;
+    font-size:2.5vh;
+    font-family:medium;
+    outline:none;
+    width:40%;
+    height:20vh;
+}
+.tagscontainer{
+    padding:0px;
+    margin:0px;
+    display:flex;
+    flex-wrap: wrap;
+    width:60vw;
+
+}
+tag{
+    flex-shrink:0;
+    display:inline-block;
+    font-size:2vh;
+    color:white;
+    font-family:medium;
+    margin:0.5vh;
+    padding:2vh;
+    border-radius:4vh;
+    background: var(--grey);
+}
+hr{
+    outline: none;
+    border: none;
+    border: 1px solid rgb(100, 100, 100);
+}
+tag span{
+    margin-left:1vh;
+    cursor: pointer;
+}
+carouselcard{
+    flex-shrink:0;
+    overflow:hidden;
+    margin: 0px 5% 0px 0px;
+    display:block;
+    position:relative;
+    top:50%;
+    width: 45%;
+    border-radius:1vh;
+    background: var(--lightergrey);
+    transform:translateY(-50%);
+    height:100%;
+}
+carouselcard pre{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding:4vh;
+    margin:0px;
+}
+carouselheader {
+    display:block;
+    position:relative;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 20%;
+    background: var(--blue);
+}
+carouselheader .opaqueinput{
+    font-size: 3.5vh;
+    font-family: medium;
+}
+carouselheader .opaqueinput::placeholder{
+    font-style: italic;
+    color: var(--lightgrey);
+}
+.carouselcontainer{
+    position:relative;
+    display: flex;
+    height:70vh;
+    width: 100%;
+    flex-wrap: no-wrap;
+    overflow:scroll;
+}
+.carouselcontainer::-webkit-scrollbar {
+    margin-top: 2vh;
+    height: 2vh;
+    display: block;
+}
+
+.carouselcontainer::-webkit-scrollbar::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: #ffffff;
+}
+
+.carouselcontainer::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: #b0b0b0;
+}
+carouselcard .opaquetextarea {
+    width: calc(100% - 9vh);
+    height: calc(80% - 24vh);
+    border-radius: 0.5vh;
+}
+.projectskillscontainer {
+    border-radius: 0.5vh;
+    overflow:scroll;
+    display: flex;
+    flex-wrap: nowrap;
+    position:absolute;
+    left: 2vh; 
+    width: calc(75% - 11vh);
+    height: 7.5vh;
+    background-color: rgb(245,245,245);
+    padding: 2vh 0px;
+}
+.skillinputfproj {
+    position:absolute;
+    display: block;
+    width: 25%;
+    right: 2vh;
+    bottom: 4.75vh;
+    border: none;
+    border-radius: 0.5vh;
+    background: rgba(0,0,0,0.1);
+}
+.skillinputfproj:focus{
+    border: none;
+    border-radius: 0.5vh;
+}
+.projectadd {
+    line-height: 1;
+    position:relative;
+    display: block;
+    font-size: 6vh;
+    padding:2vh;
+    width: 10vh;
+    height: 10vh;
+    color:white;
+    border:none;
+    background-color: var(--blue);
+    transition: 0s;
+    flex-shrink:0;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+.projectadd:focus{
+    animation:none;
+    border:none;
+}
+.projectadd:active{
+    background: rgb(120,190,200);
+}
+.headerinput{
+    position:absolute;
+    right:2vh;
+    top:50%;
+    width:15vw;
+    transform:translateY(-50%);
+    color:white;
+    text-align:right;
+    background: rgba(0,0,0,0.1);
+    border-radius:1vh;
+    border:none;
+    transition:1s;
+}
+.headerinput:focus{
+    border:none;
+    background: rgba(0,0,0,0.25);
+    width:30vw;
+}
+
+.headerinput::placeholder{
+    color: var(--lightergrey);
+    font-style:italic;
+}
+searchres{
+    padding:3vh;
+    font-family: light;
+    font-size:3vh;
+    display:block;
+    border-bottom: solid 0.5vh var(--grey);
+    color:black;
+    cursor:pointer;
+}
+a{
+    text-decoration:none;
+}
+select{
+    display:inline-block;
+    width:calc(15% - 5vh);
+    border: solid 0.3vh var(--grey);
+    font-family: light;
+    padding:2.5vh;
+    font-size:2.5vh;
+    margin-right: 0.75vw;
+}
+.backbutton {
+    border-radius: 50%;
+    position: absolute;
+    top: 15vh;
+    right: 5vh;
+    width: 9vh;
+    height: 9vh;
+    transition: 0s;
+    background-color: var(--blue)
+}

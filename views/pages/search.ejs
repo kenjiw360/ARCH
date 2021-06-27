@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+    <body>
+        <%- include('../partials/header') %>
+        <div class="nospace" style="margin:5vh;">
+            <select name="s/n" id="s/n">
+                <option value="t">Skills</option>
+                <option value="q">Name</option>
+            </select>
+            <input style="width:calc(85% - 2vh - 0.75vw);display:inline-block;" id="mainsearch" placeholder="Search by skill..." kindofsearch="t">
+            <% for (var i=0; i < list.length; i++) { %>
+                <a href="/view?uuid=<%= list[i]['id'] %>">
+                    <searchres>
+                        <h1 class="nospace" style="display:inline-block; font-family: light;"><%= list[i]["name"] %></h1>, <%= list[i]["bday"] %>: <% for (var e=0; e < list[i]["skills"].length; e++){ %><% if (e == list[i]["skills"].length - 1) { %>and <% } %><%= list[i]["skills"][e] %><% if (e != list[i]["skills"].length - 1) { %>, <% } %><% } %>
+                    </searchres>
+                </a>
+            <% } %>
+        </div>
+        <script src="/static/js/search.js"></script>
+    </body>
+</html>

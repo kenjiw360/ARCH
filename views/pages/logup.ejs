@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') -%>
+    <body>
+        <div class="centered bigwidget">
+            <textarea id="logupportiontrigger" class="hidden" required></textarea>
+            <div class="nospace logupportion2">
+                <full2>
+                    <div class="nospace centercontent lupl" style="position: absolute; width: 60%; left:0px;top:50%;transform: translate(0%, -50%);">
+                        <div class="nospace">
+                            <h1 id="logup">Signup</h1>
+                            <gbr></gbr>
+                            <input type="text" style="width: 70%;" placeholder="Full Name" id="names">
+                            <gbr></gbr>
+                            <input type="email" style="width:70%;" placeholder="Email" id="emails">
+                            <gbr></gbr>
+                            <input type="password" style="width:70%;" placeholder="Password" id="passwords">
+                            <gbr></gbr>
+                            <gbr></gbr>
+                            <button id="submits">SIGNUP</button>
+                        </div>
+                    </div>
+                    <div class="nospace centercontent lupr" style="width: 60%; right: 0px; position:absolute; top: 50%; transform: translateY(-50%);">
+                        <div class="nospace">
+                            <h1 id="logup">Login</h1>
+                            <gbr></gbr>
+                            <input type="email" style="width:70%;" placeholder="Email" id="emaill">
+                            <gbr></gbr>
+                            <input type="password" style="width:70%;" placeholder="Password" id="passwordl">
+                            <gbr></gbr><gbr></gbr>
+                            <button id="submitl">LOGIN</button>
+                        </div>
+                    </div>
+                </full2>
+            </div>
+            <img src="/static/images/ARCH-logo.svg" class="loguplogo">
+            <div class="nospace logupportion">
+                <full style="width: 90vw; position:absolute;">
+                    <img src="/static/images/ARCH-logo-white.svg" class="loguplogo">
+                    <div class="nospace centercontent" style="width:24%;position:absolute; top: 50%; transform: translate(0%, -50%); left: 8%;">
+                        <h1 class="huge nospace white" id="welcomemessage">Hello There!</h1>
+                        <h2 class="white">To create a new account</h2>
+                        <gbr></gbr>
+                        <button class="transparent" id="sidebarbutton">Signup</button>
+                    </div>
+                    <div class="nospace centercontent" style="width:24%;position:absolute;right:8%;top:50%;transform:translate(0%,-50%);">
+                        <h1 class="huge nospace white" id="welcomemessage">Welcome Back!</h1>
+                        <h2 class="white">If you already have your own account</h2>
+                        <gbr></gbr>
+                        <button class="transparent" id="sidebarbutton2">Login</button>
+                    </div>
+                </full>
+            </div>
+        </div>
+        <script src="/static/js/logup.js"></script>
+    </body>
+</html>

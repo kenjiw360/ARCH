@@ -1,0 +1,8 @@
+<svg width="396.3" height="345" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1">
+    <mask id="Mask">
+        <path fill="white" id="svg_1" d="m170.66638,15.69l-166.2,281.95c-12.53,21.26 2.79,48.08 27.47,48.08l332.39,0c24.67,0 40,-26.82 27.47,-48.08l-166.2,-281.95c-12.33,-20.92 -42.6,-20.92 -54.93,0z" class="st0" style="overflow:hidden;" />
+    </mask>
+    <rect x="0" y="0" width="400" height="400"  fill="#82C3CE" mask="url(#Mask)" />
+    <polygon stroke-width="0" stroke="white" id="svg_2" fill="white" points="26.269994735717773,390.3200087547302 6.40000057220459,377.4500136375427 230.29000854492188,-4.999992370605469 250.16000366210938,7.8799967765808105 " class="st1"  mask="url(#Mask)"></polygon>
+    <circle id="svg_3" stroke-miterlimit="10" stroke-width="25" stroke="white" fill="rgba(255, 255, 255, 0)" r="171.91" cy="346.85" cx="367" class="st2" visibility="visible" mask="url(#Mask)"></circle>
+</svg>

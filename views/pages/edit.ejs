@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') -%>
+    <body class="nospace" style="overflow-x: hidden;">
+        <%- include('../partials/header') -%>
+        <div class='nospace' style="margin: 5vh 10vh;">
+            <img style="display: inline-block; margin-right: 1vw;" class="portfolioheaderpfp">
+            <div style="display: inline-block; transform: translate(0%, -40%);">
+                <input style="display: inline-block;" class="opaqueinput" id="name" placeholder="Full Name">
+                <h1 style="display: inline-block;">, Birthdate:   </h1>
+                <input style="display: inline-block;" type="date" class="opaqueinput" style="width:25vh;" id="age">
+            </div>
+            <gbr></gbr>
+            <h1 class="nospace">Bio</h1>
+            <gbr></gbr>
+            <textarea class="opaquetextarea" id="biotextarea"></textarea>
+            <gbr></gbr>
+            <gbr></gbr>
+            <hr>
+            <gbr></gbr>
+            <gbr></gbr>
+            <h1 class="nospace">Projects and Achievements</h1>
+            <gbr></gbr>
+            <gbr></gbr>
+            <div class="carouselcontainer" id="carouselcontainer">
+                <button class="projectadd">+</button>
+                <gbr></gbr><gbr></gbr>
+            </div>
+            <gbr></gbr>
+            <gbr></gbr>
+            <hr>
+            <gbr></gbr>
+            <gbr></gbr>
+            <h1 class="nospace">Education</h1>
+            <gbr></gbr>
+            <div class="nospace" id="edutainer">
+            </div>
+            <gbr></gbr>
+            <button class="plus">+</button>
+            <gbr></gbr>
+            <gbr></gbr>
+            <hr>
+            <gbr></gbr>
+            <gbr></gbr>
+            <h1 class="nospace">Skills/Expertise</h1>
+            <gbr></gbr>
+            <div class="tagscontainer nospace">
+            </div>
+            <gbr></gbr>
+            <input placeholder="Type Here..." style="width:100%;" id="skillstaginput">
+            <gbr></gbr>
+            <gbr></gbr>
+            <gbr></gbr>
+            <gbr></gbr>
+            <gbr></gbr>
+            <gbr></gbr>
+        </div>
+        <button style="position: fixed; right: 5vh; bottom: 5vh;z-index:999999990;" id="savechanges">Save Changes</button>
+        <script src="/static/js/edit.js"></script>
+    </body>
+</html>
